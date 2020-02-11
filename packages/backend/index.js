@@ -1,3 +1,5 @@
+require('dotenv-extended').load();
+
 const { Keystone } = require('@keystonejs/keystone');
 const { PasswordAuthStrategy } = require('@keystonejs/auth-password');
 const { Text, Checkbox, Password } = require('@keystonejs/fields');
@@ -12,7 +14,9 @@ const PROJECT_NAME = "Polar Star - Science Wand - Backend";
 
 const keystone = new Keystone({
   name: PROJECT_NAME,
-  adapter: new Adapter(),
+  adapter: new Adapter({
+    mongoUri: `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@${process.env.MONGO_HOST}/${process.env.MONGO_DATABASE}?retryWrites=true&w=majority`
+  }),
   onConnect: initialiseData,
 });
 
