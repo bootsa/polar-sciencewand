@@ -1,11 +1,8 @@
 {
-  "name": "@keystonejs/example-projects-starter",
-  "description": "An example KeystoneJS project with a User list and Authentication.",
+  "name": "@polarstar/sciencewand-backend",
+  "description": "KeystoneJS based backend for Polar Star's Science Wand App",
   "private": true,
-  "version": "5.0.1",
-  "author": "The KeystoneJS Development Team",
-  "repository": "https://github.com/keystonejs/keystone.git",
-  "homepage": "https://github.com/keystonejs/keystone",
+  "version": "0.0.1",
   "license": "MIT",
   "engines": {
     "node": ">=8.4.0"

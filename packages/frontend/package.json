@@ -1,7 +1,8 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "@polarstar/sciencewand-frontend",
+  "description": "Sapper app to run frontend of Polar Star's Science Wand app",
   "version": "0.0.1",
+  "license": "MIT",
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build --legacy",
