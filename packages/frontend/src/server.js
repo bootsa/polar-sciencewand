@@ -1,3 +1,6 @@
+import dotEnvExtended from 'dotenv-extended';
+dotEnvExtended.load(); 
+
 import sirv from 'sirv';
 import polka from 'polka';
 import compression from 'compression';
