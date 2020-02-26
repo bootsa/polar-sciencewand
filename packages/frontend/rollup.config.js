@@ -29,6 +29,7 @@ export default {
 			}),
 			resolve({
 				browser: true,
+				preferBuiltins: true,
 				dedupe: ['svelte']
 			}),
 			commonjs(),
@@ -75,8 +76,17 @@ export default {
 			}),
 			commonjs()
 		],
-		external: Object.keys(pkg.dependencies).concat(
-			require('module').builtinModules || Object.keys(process.binding('natives'))
+		// external: Object.keys(pkg.dependencies).concat(
+		// 	require('module').builtinModules || Object.keys(process.binding('natives'))
+		// ),
+		// ! because of lerna (monorepo) have to update packages specifically so they don't become external dependencies
+		// ! https://github.com/nedkelly/sapper-monorepo#using-namespacedsome-name-components
+		// ! https://github.com/sveltejs/sapper/issues/973
+		external: Object.keys(pkg.dependencies)
+		.filter(i => !i.match(/@polarstar/)) // https://github.com/sveltejs/sapper-template/blob/master/README.md#using-external-components
+		.concat(
+			require('module').builtinModules ||
+				Object.keys(process.binding('natives')),
 		),
 
 		onwarn,
