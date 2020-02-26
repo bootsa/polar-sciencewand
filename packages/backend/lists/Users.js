@@ -1,4 +1,4 @@
-const { Text, Checkbox, Password } = require('@keystonejs/fields');
+const { Text, Checkbox, Password, Relationship } = require('@keystonejs/fields');
 
 // Access control functions
 const userIsAdmin = ({ authentication: { item: user } }) => Boolean(user && user.isAdmin);
@@ -26,12 +26,13 @@ module.exports = {
     password: {
       type: Password,
     },
+    items: { type: Relationship, ref: 'Item.user', many: true }
   },
-  access: {
-    read: access.userIsAdminOrOwner,
-    update: access.userIsAdminOrOwner,
-    create: access.userIsAdmin,
-    delete: access.userIsAdmin,
-    auth: true,
-  },
+  // access: {
+  //   read: access.userIsAdminOrOwner,
+  //   update: access.userIsAdminOrOwner,
+  //   create: access.userIsAdmin,
+  //   delete: access.userIsAdmin,
+  //   auth: true,
+  // },
 }

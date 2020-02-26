@@ -5,6 +5,7 @@ module.exports = {
   fields: {
     name: { type: Text, isRequired: true },
     description: { type: Markdown },
-    parent: { type: Relationship, ref: 'BigIdea' }
+    parent: { type: Relationship, ref: 'BigIdea.children' },
+    children: { type: Relationship, ref: 'BasicIdea.parent', many: true }
   }
 }
