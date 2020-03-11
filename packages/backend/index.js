@@ -7,11 +7,20 @@ const { PasswordAuthStrategy } = require('@keystonejs/auth-password');
 const { GraphQLApp } = require('@keystonejs/app-graphql');
 const { AdminUIApp } = require('@keystonejs/app-admin-ui');
 
-const UsersSchema = require('./lists/Users');
-const BigIdeaSchema = require('./lists/BigIdeas');
-const IntermediateIdeaSchema = require('./lists/IntermediateIdeas');
+const AuthorSchema = require('./lists/Authors');
 const BasicIdeaSchema = require('./lists/BasicIdeas');
-const ItemSchema = require('./lists/Items');
+const BigIdeaSchema = require('./lists/BigIdeas');
+const CategoryMetaSchema = require('./lists/CategoryMetas');
+const CohortCollectionSchema = require('./lists/CohortCollections');
+const CohortSchema = require('./lists/Cohorts');
+const CollectionSchema = require('./lists/Collections');
+const CollectionItemSchema = require('./lists/CollectionItems');
+const ConsumerItemConnectionSchema = require('./lists/ConsumerItemConnections');
+const ConsumerItemSchema = require('./lists/ConsumerItems');
+const ConsumerSchema = require('./lists/Consumers');
+const IntermediateIdeaSchema = require('./lists/IntermediateIdeas');
+const OrganisationSchema = require('./lists/Organisations');
+const UserSchema = require('./lists/Users');
 
 const initialiseData = require('./initial-data');
 
@@ -27,11 +36,20 @@ const keystone = new Keystone({
   onConnect: initialiseData,
 });
 
-keystone.createList('User', UsersSchema);
-keystone.createList('BigIdea', BigIdeaSchema);
-keystone.createList('IntermediateIdea', IntermediateIdeaSchema);
+keystone.createList('Author', AuthorSchema);
 keystone.createList('BasicIdea', BasicIdeaSchema);
-keystone.createList('Item', ItemSchema);
+keystone.createList('BigIdea', BigIdeaSchema);
+keystone.createList('CategoryMeta', CategoryMetaSchema);
+keystone.createList('Cohort', CohortSchema);
+keystone.createList('CohortCollection', CohortCollectionSchema);
+keystone.createList('Collection', CollectionSchema);
+keystone.createList('CollectionItem', CollectionItemSchema);
+keystone.createList('Consumer', ConsumerSchema);
+keystone.createList('ConsumerItem', ConsumerItemSchema);
+keystone.createList('ConsumerItemConnection', ConsumerItemConnectionSchema);
+keystone.createList('IntermediateIdea', IntermediateIdeaSchema);
+keystone.createList('Organisation', OrganisationSchema);
+keystone.createList('User', UserSchema);
 
 const authStrategy = keystone.createAuthStrategy({
   type: PasswordAuthStrategy,

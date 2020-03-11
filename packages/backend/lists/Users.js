@@ -26,7 +26,6 @@ module.exports = {
     password: {
       type: Password,
     },
-    items: { type: Relationship, ref: 'Item.user', many: true }
   },
   // access: {
   //   read: access.userIsAdminOrOwner,
