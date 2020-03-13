@@ -5,7 +5,7 @@ module.exports = {
     name: { type: Text },
     description: { type: Text },
     publishDate: { type: DateTime, yearRangeFrom: 2000, yearRange: 2040 },
-    cohort: { type: Relationship, ref: 'Cohort.cohortCollection' },
+    cohort: { type: Relationship, ref: 'Cohort.cohortCollections' },
     collectionSet: { type: Relationship, ref: 'Collection.cohortCollections' },
   }
 }
