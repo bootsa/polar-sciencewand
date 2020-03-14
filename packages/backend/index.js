@@ -7,23 +7,29 @@ const { PasswordAuthStrategy } = require('@keystonejs/auth-password');
 const { GraphQLApp } = require('@keystonejs/app-graphql');
 const { AdminUIApp } = require('@keystonejs/app-admin-ui');
 
-const AuthorSchema = require('./lists/Authors');
-const BasicIdeaSchema = require('./lists/BasicIdeas');
-const BigIdeaSchema = require('./lists/BigIdeas');
-const CategoryMetaSchema = require('./lists/CategoryMetas');
-const CohortCollectionSchema = require('./lists/CohortCollections');
-const CohortSchema = require('./lists/Cohorts');
-const CollectionSchema = require('./lists/Collections');
-const CollectionItemSchema = require('./lists/CollectionItems');
-const ConsumerItemConnectionSchema = require('./lists/ConsumerItemConnections');
-const ConsumerItemSchema = require('./lists/ConsumerItems');
-const ConsumerSchema = require('./lists/Consumers');
-const IntermediateIdeaSchema = require('./lists/IntermediateIdeas');
-const OrganisationSchema = require('./lists/Organisations');
-const SectionItemSchema = require('./lists/SectionItems');
-const SectionLayoutSchema = require('./lists/SectionLayouts');
-const SectionTemplateSchema = require('./lists/SectionTemplates');
-const UserSchema = require('./lists/Users');
+const AuthorSchema = require('./lists/users/Authors');
+const ConsumerSchema = require('./lists/users/Consumers');
+const UserSchema = require('./lists/users/Users');
+
+const BasicIdeaSchema = require('./lists/items/core/BasicIdeas');
+const BigIdeaSchema = require('./lists/items/core/BigIdeas');
+const IntermediateIdeaSchema = require('./lists/items/core/IntermediateIdeas');
+
+const CategoryMetaSchema = require('./lists/categories/CategoryMetas');
+const OrganisationSchema = require('./lists/categories/Organisations');
+const CohortCollectionSchema = require('./lists/categories/cohorts/CohortCollections');
+const CohortSchema = require('./lists/categories/cohorts/Cohorts');
+
+const CollectionSchema = require('./lists/categories/collections/Collections');
+
+const CollectionItemSchema = require('./lists/items/collection/CollectionItems');
+
+const ConsumerItemConnectionSchema = require('./lists/items/consumer/ConsumerItemConnections');
+const ConsumerItemSchema = require('./lists/items/consumer/ConsumerItems');
+
+const SectionItemSchema = require('./lists/sections/SectionItems');
+const SectionLayoutSchema = require('./lists/sections/SectionLayouts');
+const SectionTemplateSchema = require('./lists/sections/SectionTemplates');
 
 const initialiseData = require('./initial-data');
 
