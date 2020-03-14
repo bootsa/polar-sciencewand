@@ -20,6 +20,9 @@ const ConsumerItemSchema = require('./lists/ConsumerItems');
 const ConsumerSchema = require('./lists/Consumers');
 const IntermediateIdeaSchema = require('./lists/IntermediateIdeas');
 const OrganisationSchema = require('./lists/Organisations');
+const SectionItemSchema = require('./lists/SectionItems');
+const SectionLayoutSchema = require('./lists/SectionLayouts');
+const SectionTemplateSchema = require('./lists/SectionTemplates');
 const UserSchema = require('./lists/Users');
 
 const initialiseData = require('./initial-data');
@@ -49,6 +52,9 @@ keystone.createList('ConsumerItem', ConsumerItemSchema);
 keystone.createList('ConsumerItemConnection', ConsumerItemConnectionSchema);
 keystone.createList('IntermediateIdea', IntermediateIdeaSchema);
 keystone.createList('Organisation', OrganisationSchema);
+keystone.createList('SectionItem', SectionItemSchema);
+keystone.createList('SectionLayout', SectionLayoutSchema);
+keystone.createList('SectionTemplate', SectionTemplateSchema);
 keystone.createList('User', UserSchema);
 
 const authStrategy = keystone.createAuthStrategy({
