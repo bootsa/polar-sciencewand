@@ -7,6 +7,9 @@ const { PasswordAuthStrategy } = require('@keystonejs/auth-password');
 const { GraphQLApp } = require('@keystonejs/app-graphql');
 const { AdminUIApp } = require('@keystonejs/app-admin-ui');
 
+const StyleSchema = require('./lists/themes/Styles');
+const ColorSetSchema = require('./lists/themes/ColorSets');
+
 const AuthorSchema = require('./lists/users/Authors');
 const ConsumerSchema = require('./lists/users/Consumers');
 const UserSchema = require('./lists/users/Users');
@@ -53,6 +56,7 @@ keystone.createList('Cohort', CohortSchema);
 keystone.createList('CohortCollection', CohortCollectionSchema);
 keystone.createList('Collection', CollectionSchema);
 keystone.createList('CollectionItem', CollectionItemSchema);
+keystone.createList('ColorSet', ColorSetSchema);
 keystone.createList('Consumer', ConsumerSchema);
 keystone.createList('ConsumerItem', ConsumerItemSchema);
 keystone.createList('ConsumerItemConnection', ConsumerItemConnectionSchema);
@@ -61,6 +65,7 @@ keystone.createList('Organisation', OrganisationSchema);
 keystone.createList('SectionItem', SectionItemSchema);
 keystone.createList('SectionLayout', SectionLayoutSchema);
 keystone.createList('SectionTemplate', SectionTemplateSchema);
+keystone.createList('Style', StyleSchema);
 keystone.createList('User', UserSchema);
 
 const authStrategy = keystone.createAuthStrategy({
