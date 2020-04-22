@@ -13,19 +13,15 @@
     "start": "cross-env NODE_ENV=production keystone start"
   },
   "dependencies": {
-    "@keystonejs/adapter-mongoose": "^5.2.0",
-    "@keystonejs/app-admin-ui": "^5.8.0",
-    "@keystonejs/app-graphql": "^5.1.0",
-    "@keystonejs/auth-password": "^5.1.0",
-    "@keystonejs/fields": "^6.3.0",
-    "@keystonejs/fields-markdown": "^5.1.0",
-    "@keystonejs/keystone": "^5.5.0",
-    "@types/react": "^16.9.21",
-    "cross-env": "^7.0.0",
-    "dotenv-extended": "^2.7.1",
-    "graphql": "^14.6.0",
-    "immutable": "^4.0.0-rc.12",
-    "react": "^15.6.2",
-    "react-dom": "^15.6.2"
+    "@keystonejs/adapter-mongoose": "^8.0.2",
+    "@keystonejs/app-admin-ui": "^5.11.0",
+    "@keystonejs/app-graphql": "^5.1.5",
+    "@keystonejs/auth-password": "^5.1.6",
+    "@keystonejs/fields": "^9.0.3",
+    "@keystonejs/fields-markdown": "^5.1.8",
+    "@keystonejs/keystone": "^8.1.2",
+    "@types/react": "^16.9.34",
+    "cross-env": "^7.0.2",
+    "dotenv-extended": "^2.8.0"
   }
 }
