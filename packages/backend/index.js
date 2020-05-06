@@ -18,7 +18,7 @@ const BasicIdeaSchema = require('./lists/items/core/BasicIdeas');
 const BigIdeaSchema = require('./lists/items/core/BigIdeas');
 const IntermediateIdeaSchema = require('./lists/items/core/IntermediateIdeas');
 
-const CategoryMetaSchema = require('./lists/categories/CategoryMetas');
+const CategoryStyleSchema = require('./lists/themes/CategoryStyles');
 const OrganisationSchema = require('./lists/categories/Organisations');
 const CohortCollectionSchema = require('./lists/categories/cohorts/CohortCollections');
 const CohortSchema = require('./lists/categories/cohorts/Cohorts');
@@ -27,7 +27,7 @@ const CollectionSchema = require('./lists/categories/collections/Collections');
 
 const CollectionItemSchema = require('./lists/items/collection/CollectionItems');
 
-const ConsumerItemConnectionSchema = require('./lists/items/consumer/ConsumerItemConnections');
+const ConsumerConnectionSchema = require('./lists/items/consumer/ConsumerConnections');
 const ConsumerItemSchema = require('./lists/items/consumer/ConsumerItems');
 
 const SectionItemSchema = require('./lists/sections/SectionItems');
@@ -51,7 +51,7 @@ const keystone = new Keystone({
 keystone.createList('Author', AuthorSchema);
 keystone.createList('BasicIdea', BasicIdeaSchema);
 keystone.createList('BigIdea', BigIdeaSchema);
-keystone.createList('CategoryMeta', CategoryMetaSchema);
+keystone.createList('CategoryStyle', CategoryStyleSchema);
 keystone.createList('Cohort', CohortSchema);
 keystone.createList('CohortCollection', CohortCollectionSchema);
 keystone.createList('Collection', CollectionSchema);
@@ -59,7 +59,7 @@ keystone.createList('CollectionItem', CollectionItemSchema);
 keystone.createList('ColorSet', ColorSetSchema);
 keystone.createList('Consumer', ConsumerSchema);
 keystone.createList('ConsumerItem', ConsumerItemSchema);
-keystone.createList('ConsumerItemConnection', ConsumerItemConnectionSchema);
+keystone.createList('ConsumerConnection', ConsumerConnectionSchema);
 keystone.createList('IntermediateIdea', IntermediateIdeaSchema);
 keystone.createList('Organisation', OrganisationSchema);
 keystone.createList('SectionItem', SectionItemSchema);

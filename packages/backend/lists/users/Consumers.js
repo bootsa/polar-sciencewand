@@ -6,6 +6,6 @@ module.exports = {
     name: { type: Text },
     cohort: { type: Relationship, ref: 'Cohort.consumers' },
     items: { type: Relationship, ref: 'ConsumerItem.consumer', many: true },
-    connections: { type: Relationship, ref: 'ConsumerItemConnection.consumer', many: true },
+    connections: { type: Relationship, ref: 'ConsumerConnection.consumer', many: true },
   }
 }
