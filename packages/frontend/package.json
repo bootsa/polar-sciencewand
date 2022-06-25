@@ -21,7 +21,7 @@
     "dotenv-extended": "^2.7.1",
     "graphql": "^14.6.0",
     "graphql-tag": "^2.10.3",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.7",
     "polka": "next",
     "sirv": "^0.4.2",
     "subscriptions-transport-ws": "^0.9.16",
